@@ -1,0 +1,343 @@
+/* Nexus */
+#nexus-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 60px 0;
+}
+
+#nexus-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+}
+
+#nexus-btn {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #7b2fff;
+    color: #f0c030;
+    border: 2px solid #f0c030;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 0 20px rgba(123, 47, 255, 0.8);
+}
+
+#nexus-btn:hover {
+    background-color: #f0c030;
+    color: #7b2fff;
+    transform: scale(1.1);
+}
+
+.nexus-option {
+    position: absolute;
+    background-color: #1a1a2e;
+    color: #f0c030;
+    border: 1px solid #7b2fff;
+    border-radius: 8px;
+    width: 90px;
+    padding: 6px 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(0, 0); 
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.4s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.nexus-option:hover {
+    background-color: #7b2fff;
+    color: #ffffff;
+}
+
+.nexus-section {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.nexus-section.active {
+    opacity: 1;
+    max-height: 2000px;
+}
+
+/* Fanned out positions when active */
+#nexus-menu.active .nexus-option {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#nexus-menu.active #opt-schedule {
+    transform: translate(-130px, -60px);
+}
+
+#nexus-menu.active #opt-stats {
+    transform: translate(130px, -60px);
+}
+
+#nexus-menu.active #opt-spotify {
+    transform: translate(-130px, 60px);
+}
+
+#nexus-menu.active #opt-youtube {
+    transform: translate(130px, 60px);
+}
+
+#nexus-menu.active #opt-tierlist {
+    transform: translate(0px, 130px);
+}
+
+#opt-youtube {
+    width: 90px;
+    padding: 6px 12px;
+    overflow: hidden;
+    border: 2px solid #ff0000;
+    animation: yt-pulse 1s ease-in-out infinite;
+}
+
+@keyframes yt-pulse {
+    0%   { box-shadow: 0 0 0px 0px #ff0000; border-width: 2px; }
+    25%  { box-shadow: 0 0 8px 3px #ff0000; border-width: 4px; }
+    50%  { box-shadow: 0 0 4px 1px #ff0000; border-width: 2px; }
+    75%  { box-shadow: 0 0 10px 4px #ff0000; border-width: 3px; }
+    100% { box-shadow: 0 0 0px 0px #ff0000; border-width: 2px; }
+}
+
+/* Content Area */
+#content-area {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Stats Search */
+#search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#gamertag-input {
+    background-color: #1a1a2e;
+    border: 1px solid #7b2fff;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    width: 300px;
+    outline: none;
+}
+
+#gamertag-input:focus {
+    border-color: #f0c030;
+}
+
+#search-btn {
+    background-color: #7b2fff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#search-btn:hover {
+    background-color: #f0c030;
+    color: #000000;
+}
+
+#stats-results {
+    margin: 20px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.stat-card {
+    background-color: #1a1a2e;
+    border: 1px solid #7b2fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.stat-card h4 {
+    color: #f0c030;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #0000002f;
+    color: #aaaaaa;
+}
+
+.stat-row span {
+    color: #f0c030;
+}
+
+#gamertag-input {
+    font-family: sans-serif;
+}
+
+#opt-spotify {
+    width: 90px;
+    padding: 6px 12px;
+    overflow: hidden;
+    border: 2px solid #1db954;
+    animation: eq-pulse 1s ease-in-out infinite;
+}
+
+@keyframes eq-pulse {
+    0%   { box-shadow: 0 0 0px 0px #1db954, 0 0 0px 0px #1db954; border-width: 2px; }
+    25%  { box-shadow: 0 0 8px 3px #1db954, 0 0 0px 0px #1db954; border-width: 4px; }
+    50%  { box-shadow: 0 0 4px 1px #1db954, 0 0 12px 6px #1db954; border-width: 2px; }
+    75%  { box-shadow: 0 0 10px 4px #1db954, 0 0 0px 0px #1db954; border-width: 3px; }
+    100% { box-shadow: 0 0 0px 0px #1db954, 0 0 0px 0px #1db954; border-width: 2px; }
+}
+
+#opt-spotify img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Tier List */
+#tierlist-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tier-row {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 6px;
+    border: 1px solid #7b2fff;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 90px;
+}
+
+.tier-label {
+    width: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.tier-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px;
+    flex: 1;
+    background-color: #1a1a2e;
+    min-height: 90px;
+}
+
+.tier-slots.drag-over {
+    background-color: #2a2a4e;
+    outline: 2px dashed #f0c030;
+}
+
+.tier-card {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.tier-card:hover {
+    transform: scale(1.05);
+}
+
+.tier-card.dragging {
+    opacity: 0.4;
+}
+
+.tier-card img {
+    width: 70px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #7b2fff;
+    pointer-events: none;
+}
+
+.tier-card span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10px;
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 3px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+#tier-unranked {
+    margin-top: 20px;
+    border: 1px solid #7b2fff33;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#tier-unranked h4 {
+    background-color: #111118;
+    color: #7b2fff;
+    margin: 0;
+    padding: 8px 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#tier-unranked .tier-slots {
+    background-color: #0d0d1a;
+}
+
+#tierlist-reset-btn {
+    background-color: #1a1a2e;
+    color: #f0c030;
+    border: 1px solid #7b2fff;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#tierlist-reset-btn:hover {
+    background-color: #7b2fff;
+    color: #ffffff;
+}

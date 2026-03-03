@@ -1,0 +1,306 @@
+/* fan upward when active */
+#mood-menu.active .mood-option {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#mood-menu.active #opt-default {
+    transform: translate(70px, -60px);
+}
+
+#mood-menu.active #opt-cozy {
+    transform: translate(70px, -15px);
+}
+
+#mood-menu.active #opt-sleepy {
+    transform: translate(70px, 25px);
+}
+
+#mood-menu.active #opt-green {
+    transform: translate(70px, 70px);
+}
+
+
+/* Cozy mood */
+body.cozy::before {
+    background-image: url('../backgrounds/topographyCozy.svg');
+}
+body.cozy {
+    background-color: #4d210b;
+}
+
+body.cozy #topbar {
+    border-bottom: 2px solid #030200;
+    box-shadow: 0 2px 15px rgba(196, 122, 43, 0.5);
+}
+body.cozy h3,
+body.cozy #topbar h1,
+body.cozy #hobbies th,
+body.cozy #schedule th {
+    color: #e86b5a;
+}
+
+body.cozy #topbar h1 {
+    color: #e86b5a;
+}
+
+body.cozy #hobbies img {
+    border: 1px solid #c47a2b;
+}
+body.cozy #schedule input:focus {
+    border-bottom: 1px solid #e2915f;
+}
+
+body.cozy #hobbies th {
+    border-bottom: 2px solid #c47a2b;
+}
+
+body.cozy #schedule tr:hover {
+    background-color: rgba(226, 124, 15, 0.116);
+}
+
+body.cozy #nexus-btn {
+    background-color: #080601;
+    border: 2px solid #c47a2b;
+    box-shadow: 0 0 20px #e67308;
+    color:#e86b5a;
+}
+
+body.cozy .nexus-option {
+    border: 1px solid #e77409;
+    color: #b44e1e;
+}
+
+body.cozy .nexus-option:hover {
+    background-color: #db821c;
+    color: #000000;
+}
+
+body.cozy #nexus-btn:hover {
+    background-color: #f09630;
+    color: #010a0e;
+    border:2px solid #000000;
+    transform: scale(1.1);
+}
+
+body.cozy #mood-btn {
+    background-color: #080601;
+    border: 2px solid #c47a2b;
+    box-shadow: 0 0 20px #e67308;
+    border-left: none;
+}
+
+body.cozy #mood-btn:hover {
+    background-color: #db821c;
+    color: #010a0e;
+    border:2px solid #000000;
+    box-shadow: #000000;
+    transform: scale(1.1);
+}
+
+body.cozy .mood-option {
+    background-color: #f09630;
+    color: #010a0e;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px #e67308;
+}
+
+body.cozy .mood-option:hover {
+    background-color: #000000;
+    color: #e86b5a;
+}
+
+.hoverable:hover {
+    background-color: #000000;
+    color: #e86b5a;
+}
+
+
+/* Sleepy mood */
+body.sleepy::before {
+    background-image: url('../backgrounds/topographySleepy.svg');
+}
+
+body.sleepy {
+    background-color: #0a0a1a;
+}
+
+body.sleepy #topbar {
+    border-bottom: 2px solid #00ffff;
+    box-shadow: 0 2px 15px rgba(74, 74, 138, 0.5);
+}
+
+body.sleepy h3,
+body.sleepy #topbar h1,
+body.sleepy #hobbies th,
+body.sleepy #schedule th {
+    color: #1e8ab4;
+}
+
+body.sleepy #hobbies img {
+    border: 1px solid #0996e7;
+}
+
+body.sleepy #hobbies th {
+    border-bottom: 2px solid #4a4a8a;
+}
+
+body.sleepy #schedule th,
+body.sleepy #schedule td {
+    border: 3px solid #1091b12f;
+}
+
+body.sleepy #schedule {
+    border: 1px solid #4a4a8a;
+}
+
+body.sleepy #schedule tr:hover {
+    background-color: #12122a;
+}
+
+body.sleepy #schedule input:focus {
+    border-bottom: 1px solid #0996e7;
+}
+
+body.sleepy #nexus-btn {
+    background-color: #104581;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #1e8ab4;
+    color:#00fff2;
+}
+body.sleepy #nexus-btn:hover {
+    background-color: #3ab3d1;
+}
+body.sleepy .nexus-option {
+    border: 1px solid #0996e7;
+    color: #1e8ab4;
+}
+body.sleepy .nexus-option:hover {
+    background-color: #1a6375;
+    color: #000000;
+}
+
+body.sleepy #nexus-btn:hover {
+    background-color: #30b3f0;
+    color: #010a0e;
+    transform: scale(1.1);
+}
+
+body.sleepy #mood-btn {
+    background-color: #104581;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #1e8ab4;
+    border-left: none;
+}
+
+body.sleepy #mood-btn:hover {
+    background-color: #3ab3d1;
+    transform: scale(1.1);
+}
+
+body.sleepy .mood-option {
+    background-color: #1a1a2e;
+    color: #1e8ab4;
+    border: 1px solid #0996e7;
+    box-shadow: 0 0 10px #1e8ab4;
+}
+
+body.sleepy .mood-option:hover {
+    background-color: #1a6375;
+    color: #000000;
+}
+
+/*Green
+/* Sleepy mood */
+body.green::before {
+    background-image: url('../backgrounds/topographyGreen.svg');
+}
+
+body.green {
+    background-color: #000000;
+}
+
+body.green #topbar {
+    border-bottom: 2px solid #4505da;
+    box-shadow: 0 2px 15px rgba(115, 255, 0, 0.5);
+}
+
+body.green h3,
+body.green #topbar h1,
+body.green #hobbies th,
+body.green #schedule th {
+    color: #1ba717;
+}
+
+body.green #hobbies img {
+    border: 1px solid #29c909;
+}
+
+body.green #hobbies th {
+    border-bottom: 2px solid #4505da;
+}
+
+body.green #schedule th,
+body.green #schedule td {
+    border: 3px solid #4505da;
+}
+
+body.green #schedule {
+    border: 1px solid #4505da;
+}
+
+body.green #schedule tr:hover {
+    background-color: #07350b;
+}
+
+body.green #schedule input:focus {
+    border-bottom: 1px solid #29c909;
+}
+
+body.green #nexus-btn {
+    background-color: #09330d;
+    border: 2px solid #000000;
+    box-shadow: 0 0 20px #29c909;
+    color:#000000;
+}
+body.green #nexus-btn:hover {
+    background-color: #29c909;
+}
+body.green .nexus-option {
+    border: 1px solid #2aa512;
+    color: #17b309;
+}
+body.green .nexus-option:hover {
+    background-color: #3bca0f;
+    color: #000000;
+}
+
+body.green #nexus-btn:hover {
+    background-color: #3bca0f;
+    color: #010a0e;
+    transform: scale(1.1);
+}
+
+body.green #mood-btn {
+    background-color: #09330d;
+    border: 2px solid #000000;
+    box-shadow: 0 0 20px #29c909;
+    border-left: none;
+}
+
+body.green #mood-btn:hover {
+    background-color: #29c909;
+    transform: scale(1.1);
+}
+
+body.green .mood-option {
+    background-color: #09330d;
+    color: #17b309;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px #29c909;
+}
+
+body.green .mood-option:hover {
+    background-color: #1a6375;
+    color: #000000;
+}

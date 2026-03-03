@@ -1,0 +1,88 @@
+/* Stats Box */
+#stats-box {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background-color: #111118;
+    border: 1px solid #7b2fff;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #f0c030;
+    box-shadow: 0 2px 15px rgba(123, 47, 255, 0.4);
+    z-index: 998;
+}
+
+#stats-box h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#stats-box p {
+    margin: 4px 0;
+}
+
+#mood-container {
+    position: fixed;
+    left: -5;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 997;
+    overflow: visible;
+}
+
+#mood-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+}
+
+#mood-btn {
+    width: 25px;
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+    background-color: #7b2fff;
+    color: #f0c030;
+    border: 2px solid #f0c030;
+    border-left: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 2px 0 15px rgba(123, 47, 255, 0.8);
+}
+
+#mood-btn:hover {
+    background-color: #f0c030;
+    transform: scale(1.1);
+}
+
+.mood-option {
+    position: absolute;
+    background-color: #1a1a2e;
+    color: #f0c030;
+    border: 1px solid #7b2fff;
+    border-radius: 20px;
+    width: 90px;
+    padding: 5px 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: transform 0.4s ease, opacity 0.4s ease, background-color 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.mood-option:hover {
+    background-color: #7b2fff;
+    color: #ffffff;
+}

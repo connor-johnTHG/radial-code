@@ -1,0 +1,115 @@
+body {
+    background-color: #08081af1;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../backgrounds/topography.svg');
+    background-size: 500px;
+    background-repeat: repeat;
+    opacity: 0.15;
+    z-index: -1;
+    transition: background-position 1.5s ease, filter 1.5s ease;
+}
+
+body {
+    transition: background-color 1s ease;
+}
+
+#topbar {
+    background-color: #05051428;
+    border-bottom: 2px solid #8f8a9c;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0, 11, 109, 0.5);
+    transition: border-bottom 1s ease, box-shadow 1s ease;
+}
+
+#topbar h1 {
+    margin: 0;
+    color: #f0c030;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#rivals2 {
+    margin-left: auto;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+h3 {
+    color: #f0c030;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0 15px 0;
+}
+
+.highlight {
+    color: rgb(213, 213, 221);
+    font-size: 70%;
+}
+
+.subtext {
+    color: rgb(213, 213, 221);
+    font-size: 80%;
+}
+
+h3, #topbar h1 {
+    transition: color 0.5s ease;
+}
+
+/* Hobbies Table */
+#hobbies {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#hobbies th {
+    color: #f0c030;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-bottom: 2px solid #7b2fff;
+    transition: transform 1s, border 1s ease;
+}
+
+#hobbies td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+#hobbies img {
+    transition: transform 1s, border 1s ease;
+}
+
+#hobbies img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 12px;
+    background-color: #1a1a2e;
+    padding: 10px;
+    border: 1px solid #7b2fff;
+    transition: transform .5s;
+}
+
+.hoverable:hover {
+    transform: scale(1.1);
+}
+

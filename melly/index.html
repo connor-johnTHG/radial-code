@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Webpage for Melly</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="cssStuff/style.css">
+    <link rel="stylesheet" href="cssStuff/schedule.css">
+    <link rel="stylesheet" href="cssStuff/nexus.css">
+    <link rel="stylesheet" href="cssStuff/moods.css">
+    <link rel="stylesheet" href="cssStuff/stats.css">
+</head>
+<body>
+    <nav id="topbar">
+        <h1>Melly's Very Own Webpage</h1>
+        <img src="pics/rivalsLogo2.png" id="rivals2" alt="rivals logo">
+    </nav>
+
+    <main>
+        <section id="what">
+            <h3>
+                Melly's Favorite things
+            </h3>
+            <table id="hobbies">
+                <thead>
+                    <tr>
+                        <th scope="col">Apex Legends</th>
+                        <th scope="col">Duke</th>
+                        <th scope="col">Marvel Rivals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="pics/apexLogo.png" id="apex-img" class="hobby-img hoverable" title="apex" alt="Apex Legends">
+                        </td>
+                        <td>
+                            <img src="pics/duke.JPG" class="hobby-img" title="Duken" alt="Duke the dog">
+                        </td>
+                        <td>
+                            <img src="pics/rivalsLogo.png" id="rivals-img" class="hobby-img hoverable" title="rivals" alt="Marvel Rivals">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+        <div id="mood-container">
+            <div id="mood-menu">
+                <button class="mood-option" id="opt-default" onclick="setMood('default')">Default</button>
+                <button class="mood-option" id="opt-cozy" onclick="setMood('cozy')">Cozy</button>
+                <button class="mood-option" id="opt-sleepy" onclick="setMood('sleepy')">Sleepy</button>
+                <button class="mood-option" id="opt-green" onclick="setMood('green')">Green</button>
+                <button id="mood-btn" onclick="toggleMood()"></button>
+            </div>
+        </div>
+
+        <div id="nexus-container">
+            <div id="nexus-menu">
+                <button class="nexus-option" id="opt-schedule" onclick="showSection('planner')">Schedule</button>
+                <button class="nexus-option" id="opt-stats" onclick="showSection('stats-search')">Stats</button>
+                <button class="nexus-option" id="opt-spotify" onclick="window.location.href='spotify:'">Spotify</button>
+                <button class="nexus-option" id="opt-youtube" onclick="window.open('https://www.youtube.com', 'blank')">Youtube</button>
+                <button class="nexus-option" id="opt-tierlist" onclick="showSection('tier-list')">Tier List</button>
+                <button id="nexus-btn" onclick="toggleNexus()">NEXUS</button>
+            </div>
+        </div>
+
+        <div id="content-area">
+
+            <section id="planner" class="nexus-section">
+                <h3>Melly's Schedule <span class="highlight">(Edit as Needed)</span></h3>
+                <table id="schedule">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>What are we doing?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="planner-body"></tbody>
+                </table>
+            </section>
+
+            <section id="stats-search" class="nexus-section">
+                <h3>Rivals <span class="highlight">Stats Search</span></h3>
+                <div id="search-box">
+                    <input type="text" id="gamertag-input" placeholder="Enter a gamertag...">
+                    <button id="search-btn" onclick="searchPlayer()">Search</button>
+                </div>
+                <div id="stats-results"></div>
+            </section>
+        
+        <section id="tier-list" class="nexus-section">
+            <h3>Rivals <span class="highlight">Tier List</span></h3>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <button id="tierlist-reset-btn" onclick="resetTierList()">Reset Tier List</button>
+            </div>
+            <div id="tierlist-container">
+                <div class="tier-row" id="tier-S">
+                    <div class="tier-label" style="background:#ff4655;">S</div>
+                    <div class="tier-slots" data-tier="S"></div>
+                </div>
+                <div class="tier-row" id="tier-A">
+                    <div class="tier-label" style="background:#ff7f00;">A</div>
+                    <div class="tier-slots" data-tier="A"></div>
+                </div>
+                <div class="tier-row" id="tier-B">
+                    <div class="tier-label" style="background:#f0c030;">B</div>
+                    <div class="tier-slots" data-tier="B"></div>
+                </div>
+                <div class="tier-row" id="tier-C">
+                    <div class="tier-label" style="background:#4caf50;">C</div>
+                    <div class="tier-slots" data-tier="C"></div>
+                </div>
+                <div class="tier-row" id="tier-D">
+                    <div class="tier-label" style="background:#7b2fff;">D</div>
+                    <div class="tier-slots" data-tier="D"></div>
+                </div>
+                <div class="tier-row" id="tier-D">
+                    <div class="tier-label" style="background:#ee2fff;">F</div>
+                    <div class="tier-slots" data-tier="F"></div>
+                </div>
+                <div id="tier-unranked">
+                    <h4>Unranked</h4>
+                    <div class="tier-slots" data-tier="unranked"></div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <script src="jsStuff/melly.js"></script>
+    <script src="jsStuff/mood.js"></script>
+    <script src="jsStuff/nexus.js"></script>
+    <script src="jsStuff/planner.js"></script>
+    <script src="jsStuff/tierlist.js"></script>
+</body>
