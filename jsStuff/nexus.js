@@ -20,12 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.classList.remove('active');
             });
             localStorage.removeItem('tierlist-save');
+            document.body.classList.remove('nexus-active');
         } else if (menu.classList.contains('active')) {
             menu.classList.remove('active');
             btn.textContent = 'NEXUS';
+            document.body.classList.remove('nexus-active');
         } else {
             menu.classList.add('active');
             btn.textContent = 'PRESS';
+            document.body.classList.add('nexus-active');
         }
     }
 

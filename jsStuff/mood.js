@@ -12,17 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add(mood);
         localStorage.setItem('mood', mood);
         document.getElementById('mood-menu').classList.remove('active');
+        document.body.classList.remove('mood-active');
     }
 
     function toggleMood() {
-        var menu = document.getElementById('mood-menu');
+        let menu = document.getElementById('mood-menu');
         menu.classList.toggle('active');
         if (menu.classList.contains('active')) {
+            document.body.classList.add('mood-active');
             moodTimeout = setTimeout(function() {
                 menu.classList.remove('active');
+                document.body.classList.remove('mood-active');
             }, 2000);
         } else {
             clearTimeout(moodTimeout);
+            document.body.classList.remove('mood-active');
         }
     }
 
