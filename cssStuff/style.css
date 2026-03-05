@@ -19,6 +19,7 @@ body::before {
     opacity: 0.15;
     z-index: -1;
     transition: background-position 1.5s ease, filter 1.5s ease, transform .5s ease;
+    filter: drop-shadow(0 0 2px #6009ec) drop-shadow(0 0 1px #6c6d35);
 }
 
 body {

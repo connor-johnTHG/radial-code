@@ -24,6 +24,7 @@
 /* Cozy mood */
 body.cozy::before {
     background-image: url('../backgrounds/topographyCozy.svg');
+    filter: drop-shadow(0 0 1px #7604f8) drop-shadow(0 0 4px #7802ff);
 }
 body.cozy {
     background-color: #4d210b;
@@ -119,10 +120,11 @@ body.cozy .mood-option:hover {
 /* Sleepy mood */
 body.sleepy::before {
     background-image: url('../backgrounds/topographySleepy.svg');
+    filter: drop-shadow(0 0 1px #025779) drop-shadow(0 0 2px #01e8f8);
 }
 
 body.sleepy {
-    background-color: #0a0a1a;
+    background-color: #070713;
 }
 
 body.sleepy #topbar {
