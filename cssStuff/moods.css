@@ -24,7 +24,7 @@
 /* Cozy mood */
 body.cozy::before {
     background-image: url('../backgrounds/topographyCozy.svg');
-    filter: drop-shadow(0 0 1px #7604f8) drop-shadow(0 0 4px #7802ff);
+    filter: drop-shadow(0 0 1px #df841c) drop-shadow(0 0 4px #ff5e00);
 }
 body.cozy {
     background-color: #4d210b;
@@ -57,7 +57,12 @@ body.cozy #hobbies th {
 }
 
 body.cozy #schedule tr:hover {
-    background-color: rgba(226, 124, 15, 0.116);
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+body.cozy #schedule th,
+body.cozy #schedule td {
+    border: 3px solid #00000086;
 }
 
 body.cozy #nexus-btn {
@@ -120,7 +125,7 @@ body.cozy .mood-option:hover {
 /* Sleepy mood */
 body.sleepy::before {
     background-image: url('../backgrounds/topographySleepy.svg');
-    filter: drop-shadow(0 0 1px #025779) drop-shadow(0 0 2px #01e8f8);
+    filter: drop-shadow(0 0 2px #01b7ff) drop-shadow(0 0 2px #01e8f8);
 }
 
 body.sleepy {
@@ -157,7 +162,7 @@ body.sleepy #schedule {
 }
 
 body.sleepy #schedule tr:hover {
-    background-color: #12122a;
+    background-color: #0c83f356;
 }
 
 body.sleepy #schedule input:focus {
@@ -216,6 +221,7 @@ body.sleepy .mood-option:hover {
 /* Sleepy mood */
 body.green::before {
     background-image: url('../backgrounds/topographyGreen.svg');
+    filter: drop-shadow(0 0 2px #000000) drop-shadow(0 0 5px #61f30c);
 }
 
 body.green {
@@ -244,19 +250,15 @@ body.green #hobbies th {
 
 body.green #schedule th,
 body.green #schedule td {
-    border: 3px solid #4505da;
-}
-
-body.green #schedule {
-    border: 1px solid #4505da;
+    border: 3px solid #17da053f;
 }
 
 body.green #schedule tr:hover {
-    background-color: #07350b;
+    background-color: #240735d0;
 }
 
 body.green #schedule input:focus {
-    border-bottom: 1px solid #29c909;
+    border-bottom: 1px solid #4505da;
 }
 
 body.green #nexus-btn {
